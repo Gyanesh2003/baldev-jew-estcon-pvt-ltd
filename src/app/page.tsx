@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -211,7 +211,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-semibold text-blue-900 mb-4 border-b-2 border-yellow-600 inline-block">Past Projects</h3>
               <div className="flex flex-col gap-6">
-                {PAST_PROJECTS.map((proj, idx) => (
+                {PAST_PROJECTS.map((proj) => (
                   <div key={proj.title} className="bg-blue-50 rounded-lg shadow p-5 flex flex-col sm:flex-row gap-4 items-center hover:shadow-lg transition-shadow duration-300">
                     <div className="w-24 h-24 bg-gray-200 rounded overflow-hidden flex-shrink-0 flex items-center justify-center cursor-pointer" onClick={() => openLightbox(proj.images)}>
                       <ImageSlider images={proj.images} interval={2500} />
@@ -236,7 +236,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-semibold text-blue-900 mb-4 border-b-2 border-yellow-600 inline-block">Upcoming Projects</h3>
               <div className="flex flex-col gap-6">
-                {ONGOING_PROJECT.map((proj, idx) => (
+                {ONGOING_PROJECT.map((proj) => (
                   <div key={proj.title} className="bg-yellow-50 rounded-lg shadow p-5 flex flex-col sm:flex-row gap-4 items-center hover:shadow-lg transition-shadow duration-300">
                     <div className="w-24 h-24 bg-gray-200 rounded overflow-hidden flex-shrink-0 flex items-center justify-center cursor-pointer" onClick={() => openLightbox(proj.images)}>
                       <ImageSlider images={proj.images} interval={1500} />
