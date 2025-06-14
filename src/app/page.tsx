@@ -56,14 +56,16 @@ function ImageSlider({ images, interval = 2000 }: { images: string[], interval?:
       setIndex((prev) => (prev + 1) % images.length);
     }, interval);
 
-    return () => clearInterval(timer); // cleanup
+    return () => clearInterval(timer);
   }, [images.length, interval]);
 
   return (
     <div className="w-full h-64 overflow-hidden rounded-xl shadow">
-      <img
+      <Image
         src={images[index]}
         alt="Project"
+        width={800}
+        height={400}
         className="w-full h-full object-cover transition-opacity duration-500"
       />
     </div>
@@ -105,13 +107,6 @@ export default function Home() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleDeliveryMethodChange = (method: 'email' | 'whatsapp') => {
-    setFormData(prev => ({
-      ...prev,
-      deliveryMethod: method
     }));
   };
 
