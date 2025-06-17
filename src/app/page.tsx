@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -232,9 +232,9 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            {/* Upcoming Projects */}
+            {/* Ongoing Projects */}
             <div>
-              <h3 className="text-2xl font-semibold text-blue-900 mb-4 border-b-2 border-yellow-600 inline-block">Upcoming Projects</h3>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-4 border-b-2 border-yellow-600 inline-block">Ongoing Projects</h3>
               <div className="flex flex-col gap-6">
                 {ONGOING_PROJECT.map((proj) => (
                   <div key={proj.title} className="bg-yellow-50 rounded-lg shadow p-5 flex flex-col sm:flex-row gap-4 items-center hover:shadow-lg transition-shadow duration-300">
